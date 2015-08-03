@@ -14,11 +14,11 @@ html(lang='en')
                     .navbar-button#navbar-button: i.icon-menu
                     nav.row
                         ul.navbar
-                            li.navbar__item: a(href="#") Home
-                            li.navbar__item: a(href="#") Photoapp
+                            li.navbar__item: a(href="#first-section") Home
+                            li.navbar__item: a(href="#second-section") Photoapp
                             li.navbar__item.navbar__item--logo: a(href="#")
-                            li.navbar__item: a(href="#") Design
-                            li.navbar__item: a(href="#") Download
+                            li.navbar__item: a(href="#third-section") Design
+                            li.navbar__item: a(href="#sixy-section") Download
                     .row.slogan
                         h1.slogan__header Your life, a Photo
                         h2.slogan__subheader print your life in a simple photo
@@ -63,12 +63,13 @@ html(lang='en')
                             i.icon-left-open.slider__control-left
                             i.icon-right-open.slider__control-right
                         .slider__slides
-                            .slider__box
-                                img.slider__img(src="img/pic-1.jpg")
-                            .slider__box
-                                img.slider__img(src="img/pic-2.jpg")
-                            .slider__box
-                                img.slider__img(src="img/pic-2.jpg")
+                            .slider__scroll-conveyor
+                                .slider__box
+                                    img.slider__img(src="img/pic-1.jpg")
+                                .slider__box
+                                    img.slider__img(src="img/pic-2.jpg")
+                                .slider__box
+                                    img.slider__img(src="img/pic-2.jpg")
             section.row.fifth-section#fifth-section
                 form(action="#" method="POST").subscribe
                     h3.subscribe__header Subscribe to us community
@@ -99,5 +100,5 @@ html(lang='en')
                     p.copyryght Copyryght by phototime - all right reserved
                 .row__l-1.row__m-1.row__s-1
                     img(src="css/img/logo--color.png" alt="").logo--footer
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.1/jquery.min.js")
     script(src="js/main.js")

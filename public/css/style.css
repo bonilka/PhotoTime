@@ -13,6 +13,7 @@ img {
   box-sizing: border-box;
 }
 .row {
+  position: relative;
   width: 100%;
 }
 .row:after {
@@ -23,6 +24,7 @@ img {
   visibility: hidden;
 }
 .row__s-1 {
+  position: relative;
   float: left;
   width: 5%;
 }
@@ -30,6 +32,7 @@ img {
   margin-left: 5%;
 }
 .row__s-2 {
+  position: relative;
   float: left;
   width: 10%;
 }
@@ -37,6 +40,7 @@ img {
   margin-left: 10%;
 }
 .row__s-3 {
+  position: relative;
   float: left;
   width: 15%;
 }
@@ -44,6 +48,7 @@ img {
   margin-left: 15%;
 }
 .row__s-4 {
+  position: relative;
   float: left;
   width: 20%;
 }
@@ -51,6 +56,7 @@ img {
   margin-left: 20%;
 }
 .row__s-5 {
+  position: relative;
   float: left;
   width: 25%;
 }
@@ -58,6 +64,7 @@ img {
   margin-left: 25%;
 }
 .row__s-6 {
+  position: relative;
   float: left;
   width: 30%;
 }
@@ -65,6 +72,7 @@ img {
   margin-left: 30%;
 }
 .row__s-7 {
+  position: relative;
   float: left;
   width: 35%;
 }
@@ -72,6 +80,7 @@ img {
   margin-left: 35%;
 }
 .row__s-8 {
+  position: relative;
   float: left;
   width: 40%;
 }
@@ -79,6 +88,7 @@ img {
   margin-left: 40%;
 }
 .row__s-9 {
+  position: relative;
   float: left;
   width: 45%;
 }
@@ -86,6 +96,7 @@ img {
   margin-left: 45%;
 }
 .row__s-10 {
+  position: relative;
   float: left;
   width: 50%;
 }
@@ -93,6 +104,7 @@ img {
   margin-left: 50%;
 }
 .row__s-11 {
+  position: relative;
   float: left;
   width: 55%;
 }
@@ -100,6 +112,7 @@ img {
   margin-left: 55%;
 }
 .row__s-12 {
+  position: relative;
   float: left;
   width: 60%;
 }
@@ -107,6 +120,7 @@ img {
   margin-left: 60%;
 }
 .row__s-13 {
+  position: relative;
   float: left;
   width: 65%;
 }
@@ -114,6 +128,7 @@ img {
   margin-left: 65%;
 }
 .row__s-14 {
+  position: relative;
   float: left;
   width: 70%;
 }
@@ -121,6 +136,7 @@ img {
   margin-left: 70%;
 }
 .row__s-15 {
+  position: relative;
   float: left;
   width: 75%;
 }
@@ -128,6 +144,7 @@ img {
   margin-left: 75%;
 }
 .row__s-16 {
+  position: relative;
   float: left;
   width: 80%;
 }
@@ -135,6 +152,7 @@ img {
   margin-left: 80%;
 }
 .row__s-17 {
+  position: relative;
   float: left;
   width: 85%;
 }
@@ -142,6 +160,7 @@ img {
   margin-left: 85%;
 }
 .row__s-18 {
+  position: relative;
   float: left;
   width: 90%;
 }
@@ -149,6 +168,7 @@ img {
   margin-left: 90%;
 }
 .row__s-19 {
+  position: relative;
   float: left;
   width: 95%;
 }
@@ -156,6 +176,7 @@ img {
   margin-left: 95%;
 }
 .row__s-20 {
+  position: relative;
   float: left;
   width: 100%;
 }
@@ -487,16 +508,35 @@ img {
 }
 .navbar {
   margin: 0;
+  padding: 0;
   text-align: center;
   list-style: none;
   font-family: 'GothamRounded-Bold', Arial, sans-serif;
   font-size: 1em;
+}
+.navbar--stick {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  font-size: 0.8em;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 20;
 }
 .navbar__item {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10%;
   text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.navbar__item:last-child {
+  margin-right: 0;
 }
 .navbar__item a,
 .navbar__item a:active,
@@ -514,16 +554,32 @@ img {
   height: 3.4375em;
   background: url("img/logo--white.png") 50% 50% no-repeat;
 }
+.navbar__item--hiden {
+  display: none;
+}
+.navbar__item--stick {
+  padding: 1em 0;
+}
 .navbar-button {
-  display: block;
-  border: 1px solid #fff;
+  display: none;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  padding: 0.2em 0.3em;
-  background-color: rgba(255,255,255,0.7);
+  padding: 0.3em 0.3em 0.2em 0.3em;
+  background-color: #16a085;
   cursor: pointer;
+  color: #fff;
 }
 @media screen and (max-width: 64em) {
+  .navbar {
+    display: none;
+    padding: 0;
+  }
+  .navbar--stick {
+    position: relative;
+    font-size: 1em;
+    background-color: transparent;
+    widh: auto;
+  }
   .navbar__item {
     display: block;
     padding: 0.6em 0;
@@ -533,6 +589,7 @@ img {
     display: none;
   }
   .navbar-button {
+    display: block;
     position: absolute;
     top: 1em;
     right: 1em;
@@ -554,6 +611,11 @@ img {
   text-decoration: none;
   color: #fff;
 }
+.text {
+  font: 0.75em 'GothamRounded-Book', Arial, sans-serif;
+  line-height: 2em;
+  padding: 1em 0;
+}
 .slider {
   overflow: hidden;
 }
@@ -565,6 +627,9 @@ img {
   display: inline-block;
   margin-right: 1.5625em;
 }
+.slider__scroll-conveyor {
+  display: inline-block;
+}
 .slider__slide-count {
   margin-top: 2.5em;
   font: 0.75em 'GothamRounded-Medium', Arial, sans-serif;
@@ -573,6 +638,7 @@ img {
 .slider__controls--left {
   position: relative;
   left: -0.2em;
+  padding-bottom: 10%;
 }
 .slider__controls--right {
   position: relative;
@@ -639,6 +705,27 @@ img {
   line-height: 1.5625em;
   text-transform: uppercase;
   color: #16a085;
+}
+.third-section {
+  padding-top: 5em;
+  border-bottom: 1px solid #000;
+}
+.iphone {
+  position: relative;
+  top: 50%;
+}
+.iphone__wrapper {
+  padding-top: 1.25em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  max-height: 25em;
+  overflow: hidden;
+}
+@media screen and (max-width: 64em) {
+  .iphone__wrapper {
+    width: 100%;
+    text-align: center;
+  }
 }
 .fourth-section {
   background: #f5f6f7;

@@ -10,6 +10,7 @@ colNumber = 20
     margin 0 auto
     box-sizing: border-box
 .row
+    position relative
     width: 100%
     &:after
       content: ".";
@@ -22,6 +23,7 @@ colNumber = 20
     .row
       for i in (1..20)
           &__s-{i}
+              position relative
               float: left
               width: ((100%/colNumber)*i)
           &__s--offset-{i}

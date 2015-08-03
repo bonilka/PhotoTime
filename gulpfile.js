@@ -34,6 +34,7 @@ gulp.task('watch', function() {
        server: "./public"
    });
   gulp.watch("./public/*.html").on('change', browserSync.reload);
+  gulp.watch("./public/js/*.js").on('change', browserSync.reload);
   gulp.watch("./public/css/*.css").on('change', browserSync.reload);
   gulp.watch('./assets/stylus/*', ['stylus']);
   gulp.watch('./assets/jade/**/*.jade', ['jade']);

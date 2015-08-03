@@ -3,16 +3,29 @@
 ***/
 .navbar
     margin 0
+    padding 0
     text-align center
     list-style none
     font-family fontBold
     font-size: em(16px);
+    &--stick
+        position fixed
+        top 0
+        left 0
+        width 100%
+        padding 0
+        font-size: .8em
+        background-color rgba(0, 0, 0, .5)
+        z-index 20
 
     &__item
         display inline-block
         vertical-align middle
         margin-right: 10%//em(80px)
         text-transform uppercase
+        transition all .5s
+        &:last-child
+            margin-right 0
         a
             &, &:active, &:visited
                 text-decoration none
@@ -27,24 +40,40 @@
                 width em(image-size(logoWhite)[0])
                 height em(image-size(logoWhite)[1])
                 background url( (logoWhite) ) 50% 50% no-repeat
+        &--hiden
+            display none
+        &--stick
+            padding 1em 0
 .navbar-button
-    display block
-    border 1px solid #fff
+    display none
+    // border 1px solid #fff
     border-radius 5px
-    padding .2em .3em
-    background-color rgba(255,255,255,.7)
+    padding .3em .3em .2em .3em
+    background-color themeColor//rgba(255,255,255,.7)
     cursor pointer
+    color #fff
+
 @media screen and (max-width: lPoint)
     .navbar
-        // display none
+        display none
+        padding 0
+        &--stick
+            position relative
+            font-size 1em
+            background-color transparent
+            widh auto
         &__item
             display block
             padding .6em 0
             margin 0
             &--logo
                 display none
+            // &--stick
+            //     font-size 1em
+            //     padding 0
+
     .navbar-button
-        //display block
+        display block
         position absolute
         top 1em
         right 1em

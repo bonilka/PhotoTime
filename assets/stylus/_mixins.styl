@@ -4,6 +4,15 @@
 em(px, baseFont=16px){
     (px/baseFont)em
 }
+clearfix(){
+    &:after{
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+}
 clearA(color=#000){
     &, &:active, &:visited{
         text-decoration none
