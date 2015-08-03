@@ -1,0 +1,103 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        meta(name="description" content="This simple description of this page")
+        meta(name="keywords" content="web,design,html,css,html5,free,template")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Jade
+        link(rel='stylesheet', href='css/style.css')
+    body
+        .container
+            section.row
+                .first-section#first-section
+                    .navbar-button#navbar-button: i.icon-menu
+                    nav.row
+                        ul.navbar
+                            li.navbar__item: a(href="#") Home
+                            li.navbar__item: a(href="#") Photoapp
+                            li.navbar__item.navbar__item--logo: a(href="#")
+                            li.navbar__item: a(href="#") Design
+                            li.navbar__item: a(href="#") Download
+                    .row.slogan
+                        h1.slogan__header Your life, a Photo
+                        h2.slogan__subheader print your life in a simple photo
+                        a.button(href="#") Get started
+                    .social-bar
+                        a(href="#").social-bar__link: i.icon-twitter
+                        a(href="#").social-bar__link: i.icon-flickr
+                        a(href="#").social-bar__link: i.icon-dribbble
+            section.row.second-section#second-section
+                    .row__l-5.row__l--offset-2.row__m-5.row__m--offset-2.row__s-20
+                        h3.text-header.text-header--theme-color  Rappresent your life with a simple photo
+                        p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                        a(href="#").button Get started
+            section.row.third-section#third-section
+                    .row__l-5.row__l--offset-2.row__m-5.row__m--offset-2.row__s-20
+                        .iphone__wrapper
+                            .iphone
+                                img(src="css/img/iphone.png" alt="").iphone__img
+                    .row__l-7.row__l--offset-5.row__m-7.row__m--offset-5.row__s-20
+                        .slider
+                            .slider__slides
+                            - var slideCount = 5
+                            - //for (var i = 0; i < slideCount; ++i) {
+                                .slider__box
+                                    h3.text-header.text-header--theme-color Degign
+                                    p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    a(href="#").button Learn more
+                            -//}
+                            .slider__slide-count 01/0#{slideCount}
+                            .slider__controls.slider__controls--left
+                                i.icon-left-open.slider__control-left
+                                i.icon-right-open.slider__control-right
+            section.row.fourth-section#fourth-section
+                .row__l-3.row__l--offset-2
+                    .community
+                        img(src="css/img/logo--color.png").community__img
+                        h4.community__header Our community
+                        p.community__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .row__l-12.row__l--offset-1
+                    .slider
+                        .slider__controls.slider__controls--right
+                            i.icon-left-open.slider__control-left
+                            i.icon-right-open.slider__control-right
+                        .slider__slides
+                            .slider__box
+                                img.slider__img(src="img/pic-1.jpg")
+                            .slider__box
+                                img.slider__img(src="img/pic-2.jpg")
+                            .slider__box
+                                img.slider__img(src="img/pic-2.jpg")
+            section.row.fifth-section#fifth-section
+                form(action="#" method="POST").subscribe
+                    h3.subscribe__header Subscribe to us community
+                    span.subscribe__input
+                        input(type="email" required )
+                        label.subscribe__label Your email
+                        button(type="submit").subscribe__submit: i.icon-ok
+            section.row.sixy-section#sixy-section
+                .download
+                    h3.download__header Download it
+                    p.download__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    .row    
+                        a(href="").download__button.download__button--margin-right
+                            span Apple store
+                            i.icon-apple
+                        a(href="").download__button
+                            span Android store
+                            i.icon-android
+            footer.row.footer#footer
+                .row__l-15.row__l--offset-2.row__m-15.row__m--offset-2.row__s-15.row__s--offset-2
+                    ul.about
+                        li.about__item
+                            a(href="").about__link Credits
+                        li.about__item
+                            a(href="").about__link Privacy
+                        li.about__item
+                            a(href="").about__link Our teams
+                    p.copyryght Copyryght by phototime - all right reserved
+                .row__l-1.row__m-1.row__s-1
+                    img(src="css/img/logo--color.png" alt="").logo--footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js")
+    script(src="js/main.js")

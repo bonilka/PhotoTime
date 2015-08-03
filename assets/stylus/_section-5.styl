@@ -1,0 +1,50 @@
+//fifth-section
+.fifth-section
+    padding em(350px) 0 em(325px) 0
+    background url('img/bg-5.jpg')
+    background-size cover
+$font-input
+    font 1em fontMedium
+    padding 1em
+.subscribe
+    text-align center
+    &__header
+        margin 0 0 em(35px, 24px) 0
+        font em(24px) fontBold
+        text-transform: uppercase;
+        color: #fff
+    &__label
+        @extends $font-input
+        pointer-events: none;
+        display block
+        //width 100%
+        position absolute
+        top 0
+        // left 0
+        text-transform uppercase
+    &__input
+        position relative
+        display inline-block
+        input
+            @extends $font-input
+            border none
+            border-radius 3px 0 0 3px
+            &:focus
+                outline-color  themeColor
+
+    &__submit
+        padding 1em
+        border none
+        border-radius 0 3px 3px 0
+        background-color themeColor
+        color #fff
+        font-size 1.01em;
+        cursor pointer
+        transition: background-color .3s;
+        &:hover
+            background-color #1abc9c
+.subscribe__input input:focus+.subscribe__label
+,.subscribe__input input:valid+.subscribe__label
+{
+    display: none
+}

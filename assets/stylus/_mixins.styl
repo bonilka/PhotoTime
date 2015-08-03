@@ -1,0 +1,37 @@
+/***
+    MIXINS
+***/
+em(px, baseFont=16px){
+    (px/baseFont)em
+}
+clearA(color=#000){
+    &, &:active, &:visited{
+        text-decoration none
+        color color
+    }
+}
+
+/* Fonts mixin
+    from https://gist.github.com/diogomoretti/7278541
+
+    How to use:
+    webfont('Open Sans', 'open-sans-webfont', true, 'normal')
+*/
+font-url(file)
+  return 'fonts/' + file
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+        url(font-url(file + '.woff')) format('woff'),
+        url(font-url(file + '.ttf')) format('truetype'),
+        url(font-url(file + '.svg#'+ family)) format('svg')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio:0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#'+ family)) format('svg')

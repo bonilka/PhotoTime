@@ -1,0 +1,46 @@
+colNumber = 20
+// @import 'variables'
+
+/***
+  GRID
+***/
+.container
+    width: 100%;
+    max-width: templateWidth
+    margin 0 auto
+    box-sizing: border-box
+.row
+    width: 100%
+    &:after
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+
+// @media screen and (min-width: sPoint)
+    .row
+      for i in (1..20)
+          &__s-{i}
+              float: left
+              width: ((100%/colNumber)*i)
+          &__s--offset-{i}
+              margin-left (100% / colNumber)*i
+
+@media screen and (min-width: lPoint)
+    .row
+      for i in (1..20)
+        &__l-{i}
+          float: left
+          width: (100%/colNumber)*i
+        &__l--offset-{i}
+            margin-left (100%/colNumber)*i
+
+@media screen and (min-width: mPoint)
+    .row
+      for i in (1..20)
+        &__m-{i}
+          float: left
+          width: (100%/colNumber)*i
+        &__m--offset-{i}
+            margin-left (100%/colNumber)*i

@@ -1,0 +1,27 @@
+.slider
+    overflow hidden
+    &__slides
+        width: 2000px
+    &__box
+        position relative
+        display inline-block
+        margin-right em(25px)
+    &__slide-count
+        margin-top em(40px)
+        //margin-left em(3.2px, .75*16)
+        font .75em fontMedium
+        line-height 2.5em
+    &__controls
+        &--left
+            position relative
+            left -.2em
+        &--right
+            position relative
+            right -.2em
+            padding-bottom em(20px)
+            text-align right
+    &__control-left, &__control-right
+        cursor pointer
+        // font-size 1rem
+    // &__controls
+    //     font-size 0

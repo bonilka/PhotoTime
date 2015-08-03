@@ -1,0 +1,50 @@
+/***
+    NAVBAR
+***/
+.navbar
+    margin 0
+    text-align center
+    list-style none
+    font-family fontBold
+    font-size: em(16px);
+
+    &__item
+        display inline-block
+        vertical-align middle
+        margin-right: 10%//em(80px)
+        text-transform uppercase
+        a
+            &, &:active, &:visited
+                text-decoration none
+                color #fff
+
+        &--logo
+            position relative
+            top em(-10px)
+            a
+                logoWhite = "img/logo--white.png"
+                display block
+                width em(image-size(logoWhite)[0])
+                height em(image-size(logoWhite)[1])
+                background url( (logoWhite) ) 50% 50% no-repeat
+.navbar-button
+    display block
+    border 1px solid #fff
+    border-radius 5px
+    padding .2em .3em
+    background-color rgba(255,255,255,.7)
+    cursor pointer
+@media screen and (max-width: lPoint)
+    .navbar
+        // display none
+        &__item
+            display block
+            padding .6em 0
+            margin 0
+            &--logo
+                display none
+    .navbar-button
+        //display block
+        position absolute
+        top 1em
+        right 1em
