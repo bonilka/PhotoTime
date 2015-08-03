@@ -40,13 +40,14 @@ html(lang='en')
                     .row__l-7.row__l--offset-5.row__m-7.row__m--offset-5.row__s-20
                         .slider
                             .slider__slides
-                            - var slideCount = 5
-                            - //for (var i = 0; i < slideCount; ++i) {
-                                .slider__box
-                                    h3.text-header.text-header--theme-color Degign
-                                    p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                    a(href="#").button Learn more
-                            -//}
+                                .slider__scroll-conveyor
+                                - var slideCount = 5
+                                - for (var i = 0; i < slideCount; ) {
+                                    .slider__box
+                                        h3.text-header.text-header--theme-color Degign #{++i}
+                                        p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                        a(href="#").button Learn more
+                                -}
                             .slider__slide-count 01/0#{slideCount}
                             .slider__controls.slider__controls--left
                                 i.icon-left-open.slider__control-left
@@ -69,7 +70,7 @@ html(lang='en')
                                 .slider__box
                                     img.slider__img(src="img/pic-2.jpg")
                                 .slider__box
-                                    img.slider__img(src="img/pic-2.jpg")
+                                    img.slider__img(src="https://unsplash.it/370/244/?random")
             section.row.fifth-section#fifth-section
                 form(action="#" method="POST").subscribe
                     h3.subscribe__header Subscribe to us community

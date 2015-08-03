@@ -620,9 +620,10 @@ img {
   overflow: hidden;
 }
 .slider__slides {
-  width: 2000px;
+  width: 9999px;
 }
 .slider__box {
+  max-width: 28em;
   position: relative;
   display: inline-block;
   margin-right: 1.5625em;

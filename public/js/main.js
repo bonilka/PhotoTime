@@ -105,21 +105,27 @@ APP.window = (function() {
 })();
 APP.slider = (function() {
     var el = $('.slider');
-    var params = {};
     return {
         init: function() {
             this.events();
-            // el.each(function(i, $el){
-            //     params.margin = [
-            //         $el.css('margin-top'),
-            //         $el.css('margin-right'),
-            //         $el.css('margin-bottom'),
-            //         $el.css('margin-left')
-            //     ]
-            // });
         },
         nextSlide: function($slider) {
-
+            var $slides = $slider.find('.slider__box');
+            var margins = parseInt($slides.css('margin-right')) + parseInt($slides.css('margin-left'));
+            var $slideConveyor = $slider.find('.slider__scroll-conveyor');
+            var step = $slides.width() + margins;
+            var width = $slides.length * step;
+            if (parseInt($slideConveyor.css('margin-left')) < 0) { //it last item?
+                $slideConveyor.animate({
+                    'margin-left': (parseInt($slideConveyor.css('margin-left')) + step) + 'px'
+                }, {
+                    duration: 800,
+                    complete: function() {
+                        console.log(parseInt($slideConveyor.css('margin-left')));
+                        console.log(-1 * ($slides.length - 1) * (step));
+                    }
+                });
+            }
         },
         prevSlide: function($slider) {
             var $slides = $slider.find('.slider__box');
@@ -127,10 +133,16 @@ APP.slider = (function() {
             var $slideConveyor = $slider.find('.slider__scroll-conveyor');
             var step = $slides.width() + margins;
             var width = $slides.length * step;
-            if($slides.last().css('margin-left') != $slides.length * (step-1) ){
+            if (parseInt($slideConveyor.css('margin-left')) > -1 * ($slides.length - 2) * (step)) { //it last item?
                 $slideConveyor.animate({
                     'margin-left': (parseInt($slideConveyor.css('margin-left')) - step) + 'px'
-                }, 800);
+                }, {
+                    duration: 800,
+                    complete: function() {
+                        console.log(parseInt($slideConveyor.css('margin-left')));
+                        console.log(-1 * ($slides.length - 1) * (step));
+                    }
+                });
             }
         },
         events: function() {
@@ -140,6 +152,12 @@ APP.slider = (function() {
                 console.log('click-left');
                 var $thisSlider = $(this).parents('.slider');
                 that.prevSlide($thisSlider);
+            });
+            el.on('click', '.slider__control-right', function(event) {
+                event.preventDefault();
+                console.log('click-right');
+                var $thisSlider = $(this).parents('.slider');
+                that.nextSlide($thisSlider);
             });
         }
     }
