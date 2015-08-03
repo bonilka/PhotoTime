@@ -38,7 +38,7 @@ html(lang='en')
                             .iphone
                                 img(src="css/img/iphone.png" alt="").iphone__img
                     .row__l-7.row__l--offset-5.row__m-7.row__m--offset-5.row__s-20
-                        .slider
+                        .slider(data-count = "1" data-max-count="5")
                             .slider__slides
                                 .slider__scroll-conveyor
                                 - var slideCount = 5
@@ -48,7 +48,9 @@ html(lang='en')
                                         p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                         a(href="#").button Learn more
                                 -}
-                            .slider__slide-count 01/0#{slideCount}
+                            .slider__slide-count 
+                                span.slider__current 01
+                                | /0#{slideCount}
                             .slider__controls.slider__controls--left
                                 i.icon-left-open.slider__control-left
                                 i.icon-right-open.slider__control-right
@@ -59,7 +61,7 @@ html(lang='en')
                         h4.community__header Our community
                         p.community__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 .row__l-12.row__l--offset-1
-                    .slider
+                    .slider(data-count = "1" data-max-count="2")
                         .slider__controls.slider__controls--right
                             i.icon-left-open.slider__control-left
                             i.icon-right-open.slider__control-right
