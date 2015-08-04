@@ -9,6 +9,8 @@ The project leverages:
 * [Stylus](https://learnboost.github.io/stylus/)
 * [Jade](http://jade-lang.com/)
 * [Browser Sync](www.browsersync.io/)
+
+
 ### Directory structure
     public - contained compiled css, html files and js files
     assets - contained files for dev (stylus, jade)
