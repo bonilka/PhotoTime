@@ -1,6 +1,4 @@
 colNumber = 20
-// @import 'variables'
-
 /***
   GRID
 ***/
@@ -19,15 +17,14 @@ colNumber = 20
       clear: both;
       visibility: hidden;
 
-// @media screen and (min-width: sPoint)
-    .row
-      for i in (1..20)
-          &__s-{i}
-              position relative
-              float: left
-              width: ((100%/colNumber)*i)
-          &__s--offset-{i}
-              margin-left (100% / colNumber)*i
+// .row
+  for i in (1..20)
+      &__s-{i}
+          position relative
+          float: left
+          width: ((100%/colNumber)*i)
+      &__s--offset-{i}
+          margin-left (100% / colNumber)*i
 
 @media screen and (min-width: lPoint)
     .row

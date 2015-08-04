@@ -23,164 +23,164 @@ img {
   clear: both;
   visibility: hidden;
 }
-.row__s-1 {
+__s-1 {
   position: relative;
   float: left;
   width: 5%;
 }
-.row__s--offset-1 {
+__s--offset-1 {
   margin-left: 5%;
 }
-.row__s-2 {
+__s-2 {
   position: relative;
   float: left;
   width: 10%;
 }
-.row__s--offset-2 {
+__s--offset-2 {
   margin-left: 10%;
 }
-.row__s-3 {
+__s-3 {
   position: relative;
   float: left;
   width: 15%;
 }
-.row__s--offset-3 {
+__s--offset-3 {
   margin-left: 15%;
 }
-.row__s-4 {
+__s-4 {
   position: relative;
   float: left;
   width: 20%;
 }
-.row__s--offset-4 {
+__s--offset-4 {
   margin-left: 20%;
 }
-.row__s-5 {
+__s-5 {
   position: relative;
   float: left;
   width: 25%;
 }
-.row__s--offset-5 {
+__s--offset-5 {
   margin-left: 25%;
 }
-.row__s-6 {
+__s-6 {
   position: relative;
   float: left;
   width: 30%;
 }
-.row__s--offset-6 {
+__s--offset-6 {
   margin-left: 30%;
 }
-.row__s-7 {
+__s-7 {
   position: relative;
   float: left;
   width: 35%;
 }
-.row__s--offset-7 {
+__s--offset-7 {
   margin-left: 35%;
 }
-.row__s-8 {
+__s-8 {
   position: relative;
   float: left;
   width: 40%;
 }
-.row__s--offset-8 {
+__s--offset-8 {
   margin-left: 40%;
 }
-.row__s-9 {
+__s-9 {
   position: relative;
   float: left;
   width: 45%;
 }
-.row__s--offset-9 {
+__s--offset-9 {
   margin-left: 45%;
 }
-.row__s-10 {
+__s-10 {
   position: relative;
   float: left;
   width: 50%;
 }
-.row__s--offset-10 {
+__s--offset-10 {
   margin-left: 50%;
 }
-.row__s-11 {
+__s-11 {
   position: relative;
   float: left;
   width: 55%;
 }
-.row__s--offset-11 {
+__s--offset-11 {
   margin-left: 55%;
 }
-.row__s-12 {
+__s-12 {
   position: relative;
   float: left;
   width: 60%;
 }
-.row__s--offset-12 {
+__s--offset-12 {
   margin-left: 60%;
 }
-.row__s-13 {
+__s-13 {
   position: relative;
   float: left;
   width: 65%;
 }
-.row__s--offset-13 {
+__s--offset-13 {
   margin-left: 65%;
 }
-.row__s-14 {
+__s-14 {
   position: relative;
   float: left;
   width: 70%;
 }
-.row__s--offset-14 {
+__s--offset-14 {
   margin-left: 70%;
 }
-.row__s-15 {
+__s-15 {
   position: relative;
   float: left;
   width: 75%;
 }
-.row__s--offset-15 {
+__s--offset-15 {
   margin-left: 75%;
 }
-.row__s-16 {
+__s-16 {
   position: relative;
   float: left;
   width: 80%;
 }
-.row__s--offset-16 {
+__s--offset-16 {
   margin-left: 80%;
 }
-.row__s-17 {
+__s-17 {
   position: relative;
   float: left;
   width: 85%;
 }
-.row__s--offset-17 {
+__s--offset-17 {
   margin-left: 85%;
 }
-.row__s-18 {
+__s-18 {
   position: relative;
   float: left;
   width: 90%;
 }
-.row__s--offset-18 {
+__s--offset-18 {
   margin-left: 90%;
 }
-.row__s-19 {
+__s-19 {
   position: relative;
   float: left;
   width: 95%;
 }
-.row__s--offset-19 {
+__s--offset-19 {
   margin-left: 95%;
 }
-.row__s-20 {
+__s-20 {
   position: relative;
   float: left;
   width: 100%;
 }
-.row__s--offset-20 {
+__s--offset-20 {
   margin-left: 100%;
 }
 @media screen and (min-width: 64em) {
@@ -699,7 +699,7 @@ img {
 }
 .second-section {
   padding: 6.25em 0;
-  background: #f5f6f7 url("img/iphone-in-hand.png") 500px 95px no-repeat;
+  background: #f5f6f7 url("img/iphone-in-hand.png") local 100% bottom no-repeat;
 }
 .text-header {
   font: 1.125em 'GothamRounded-Bold', Arial, sans-serif;
@@ -707,9 +707,13 @@ img {
   text-transform: uppercase;
   color: #16a085;
 }
+@media screen and (max-width: 40em) {
+  .second-section {
+    background: none;
+  }
+}
 .third-section {
   padding-top: 5em;
-  border-bottom: 1px solid #000;
 }
 .iphone {
   position: relative;

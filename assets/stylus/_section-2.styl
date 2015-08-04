@@ -1,10 +1,13 @@
 //second-section
 .second-section
-    // @extend .row
     padding em(100px) 0
-    background #f5f6f7 url('img/iphone-in-hand.png') 500px 95px no-repeat
+    background #f5f6f7 url('img/iphone-in-hand.png') local 100% bottom no-repeat
 .text-header
     font em(18px) fontBold
     line-height: em(25px);
     text-transform uppercase
     color themeColor
+
+@media screen and (max-width: mPoint)
+    .second-section
+        background none
